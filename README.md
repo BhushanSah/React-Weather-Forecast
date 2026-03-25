@@ -1,16 +1,45 @@
-# React + Vite
+# React Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather application built with React, Material UI, and the OpenWeather API. Users can search for a city and view real-time weather details such as temperature, humidity, minimum and maximum temperature, and weather conditions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Search weather by city name
+- Displays:
+  - Current temperature
+  - Minimum temperature
+  - Maximum temperature
+  - Humidity
+  - Feels-like temperature
+  - Weather description
+- Dynamic weather images based on temperature and humidity
+- Error handling for invalid city names
+- Built with Material UI for a clean interface
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Material UI
+- OpenWeather API
+- CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `WeatherApp.jsx` handles the main state
+- `SearchBox.jsx` manages city input and API requests
+- `InfoBox.jsx` displays weather information in a card layout
+
+## How It Works
+
+1. The user enters a city name
+2. The app sends a request to the OpenWeather API
+3. The weather data is fetched and stored in state
+4. The UI updates and displays the result in a weather card
+
+## Environment Variables
+
+Create a `.env` file in the root folder and add your API key:
+
+```env
+VITE_APIKEY=your_api_key_here
